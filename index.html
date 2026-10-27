@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciador Peak</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Espaço para adicionar um logo -->
+        <!-- <img src="imagens/logo.png" alt="Logo"> -->
+
+        <h1>Gerenciador PEAK!!!</h1>
+        <p>Pare de ser vagabundo e comece a ser organizado
+
+            <img src="tukuna.jpg" alt="Logo do site" class="logo">
+
+        </p>
+    </header>
+
+    <main>
+        <section class="painel">
+            <h2>Cadastrar atividade</h2>
+
+            <form id="formTarefa">
+                <label for="nome">Nome da atividade</label>
+                <input type="text" id="nome" required
+                       placeholder="Ex.: Estudar matemática">
+
+                <label for="data">Data de entrega</label>
+                <input type="date" id="data" required>
+
+                <label for="serie">Série ou anime</label>
+                <input type="text" id="serie"
+                       placeholder="Ex.: Naruto (opcional)">
+
+                <label for="categoria">Categoria</label>
+                <select id="categoria" required>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Animes">Animes</option>
+                    <option value="Pessoal">Pessoal</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade" required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <button type="submit">Adicionar atividade</button>
+            </form>
+        </section>
+
+        <section class="painel progresso">
+            <h2>Meu progresso</h2>
+            <p id="contador">0 de 0 atividades concluídas</p>
+
+            <progress id="barraProgresso" value="0" max="100"></progress>
+            <p id="porcentagem">0% concluído</p>
+        </section>
+
+        <section class="painel">
+            <h2>Minhas atividades</h2>
+
+            <label for="filtro">Filtrar por categoria</label>
+            <select id="filtro">
+                <option value="Todas">Todas</option>
+                <option value="Estudos">Estudos</option>
+                <option value="Animes">Animes</option>
+                <option value="Pessoal">Pessoal</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <div id="listaTarefas" class="lista-tarefas">
+                <!-- As atividades aparecem aqui -->
+            </div>
+        </section>
+
+        <section class="painel">
+            <h2>Animes PEAK</h2>
+
+            <div class="galeria">
+                <div class="anime">
+                    <img src="bochi.jpg"
+                         alt="Imagem do anime 1">
+                    <p>Bocchi the rock</p>
+                </div>
+
+                <div class="anime">
+                    <img src="frontier.jpg"
+                         alt="Imagem do anime 2">
+                    <p>Shangri la frontier</p>
+                </div>
+
+                <div class="anime">
+                    <img src="oshi.jpg"
+                         alt="Imagem do anime 3">
+                    <p>Oshi-no-ko</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Me da A, Por favor </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
